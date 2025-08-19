@@ -68,16 +68,16 @@ export default class MoviesDAO {
     }
   }
 
-  static async getRatings() { 
-  let ratings = []
-  try {
-    ratings = await movies.distinct("rated")
-    return ratings
-  } catch(e) {
-    console.error(`unable to get ratings, ${e}`)
-    return ratings
+  static async getRatings() {
+    let ratings = []
+    try {
+      ratings = await movies.distinct("rated")
+      return ratings
+    } catch (e) {
+      console.error(`unable to get ratings, ${e}`)
+      return ratings
+    }
   }
-}
 
 
 }
